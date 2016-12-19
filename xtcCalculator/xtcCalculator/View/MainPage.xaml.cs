@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using xtcCalculator.ViewModel;
 
 namespace xtcCalculator.View
 {
@@ -13,6 +14,9 @@ namespace xtcCalculator.View
         public MainPage()
         {
             InitializeComponent();
+
+            MainPageViewModel vm = new MainPageViewModel();
+            BindingContext = vm;
         }
     }
 }
