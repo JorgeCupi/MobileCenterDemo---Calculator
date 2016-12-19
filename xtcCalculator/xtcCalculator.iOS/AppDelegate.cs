@@ -21,6 +21,11 @@ namespace xtcCalculator.iOS
             // Xamarin Mobile Center
             MobileCenter.Configure("b11fa52b-63d4-4b8f-becf-06a48e0b08c5");
 
+            #if ENABLE_TEST_CLOUD
+            // requires Xamarin Test Cloud Agent
+            Xamarin.Calabash.Start();
+            #endif
+
             LoadApplication(new App());
             return base.FinishedLaunching(app, options);
         }

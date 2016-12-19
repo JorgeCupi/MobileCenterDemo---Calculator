@@ -2,5 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="xtcCalculator.View.MainPage">
-  <Label Text="This is my calculator" VerticalOptions="Center" HorizontalOptions="Center" />
+  <StackLayout>
+    <Label Text="My calculator" FontSize="32"/>
+    <Entry Text="{Binding valueA}" AutomationId="valueA"/>
+    <Entry Text="{Binding valueB}" AutomationId="valueB"/>
+    <Label Text="{Binding result, StringFormat='El resultado es: {0}'}" AutomationId="result"/>
+  </StackLayout>
 </ContentPage>
